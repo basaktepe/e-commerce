@@ -45,7 +45,6 @@ p {
 
 
 button {
-    margin-top: 1.25rem;
     cursor: pointer;
     border: none;
 }
@@ -82,8 +81,8 @@ button {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="number"]{
-outline: none;
+input[type="number"] {
+    outline: none;
     border: 1px solid #dee0ea;
     padding: 0.5rem 0.5rem 0.5rem 0.938rem;
 }
@@ -91,11 +90,11 @@ outline: none;
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
-input[type="number"]:focus{
-   border-color: grey;
+input[type="number"]:focus {
+    border-color: grey;
 }
 
-input[type="number"]::-webkit-inner-spin-button{
+input[type="number"]::-webkit-inner-spin-button {
     opacity: 1;
 
 }
@@ -323,3 +322,68 @@ header .menu-dropdown-mega-menu {
 
 /* ? menu dropdown end */
 /* ! header end */
+
+/* ! modal search start */
+
+.modal-search .modal-wrapper{
+    background-color: #ffffff;
+    padding: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 800px;
+
+}
+.modal-search .modal-wrapper .modal-title    {
+    font-size: 1.875rem;
+}
+.modal-search .modal-wrapper .modal-text    {
+    color: #7A7A7A;
+    font-size: 0.875rem;
+}
+
+
+.modal-search .modal-wrapper .search-form {
+    display: flex;
+}
+
+.modal-search .search-form input {
+    width: 100%;
+}
+
+.modal-search .search-form button {
+    cursor: pointer;
+    padding: 0.938rem;
+    background-color: #F0F0F0 ;
+}
+
+.modal-search .search-heading {
+    padding: 0.875rem;
+}
+
+.modal-search .result-item {
+    display: flex;
+    font-size: 1rem;
+}
+
+.modal-search .result-item .search-thumb {
+    display: flex;
+    font-size: 1rem;
+}
+
+.modal-search .result-item .search-info {
+
+}
+
+.modal-search .search-info h4 {
+
+}
+
+.modal-search .search-info .search-sku {
+
+}
+
+.modal-search .search-info .search-price {
+
+}
+/* ! modal search end */
