@@ -1,0 +1,27 @@
+.logo {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.logo-text {
+  font-family: Arial;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.header-input {
+  border: none;
+  border-bottom: 1px solid lightgray;
+  padding: 0.3125rem, 0.625rem;
+  outline: none;
+  margin-right: 0.625rem;
+}
+
+.icon {
+  font-size: 1.25rem;
+  margin-right: 0.625rem;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
