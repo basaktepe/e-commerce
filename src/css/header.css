@@ -1,10 +1,10 @@
 .logo {
-  width: 3.75rem;
-  height: 3.75rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-right: 10px;
 }
 
 .logo-text {
-  font-family: Arial;
   font-size: 0.9375rem;
   font-weight: 600;
 }
