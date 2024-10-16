@@ -20,11 +20,17 @@
   border: none;
   padding: 10px;
   border-radius: 5px;
-  background-color: antiquewhite;
+  background-color: rgb(98, 105, 234);
+  color: white;
 }
 
 .detail-button:hover {
   cursor: pointer;
-  background-color: rgb(212, 192, 167);
+  background-color: rgb(65, 70, 160);
   transition: all 0.6;
+}
+
+.price {
+  color: rgb(24, 24, 24);
+  text-align: center;
 }

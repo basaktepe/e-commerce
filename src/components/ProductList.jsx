@@ -12,7 +12,10 @@ function ProductList() {
     dispatch(getAllProducts());
   }, []);
   return (
-    <div className="flex-row" style={{ flexWrap: "wrap", marginTop: "25px" }}>
+    <div
+      className="flex-row"
+      style={{ flexWrap: "wrap", marginTop: "25px", gap: "0.3125rem" }}
+    >
       {products &&
         products.map((product) => (
           <Product key={product.id} product={product}></Product>

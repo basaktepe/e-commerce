@@ -5,8 +5,9 @@
 }
 
 .logo-text {
-  font-size: 0.9375rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  color: rgb(98, 105, 234);
 }
 
 .header-input {

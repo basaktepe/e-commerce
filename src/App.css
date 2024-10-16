@@ -4,6 +4,19 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Roboto";
+  color: rgb(71, 70, 70);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Arial;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  margin: 0;
 }
 
 .flex-row {
