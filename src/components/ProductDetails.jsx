@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { setSelectedProduct } from "../redux/slices/productSlice";
 import "../css/productDetails.css";
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
+import { addToBasket } from "../redux/slices/basketSlice";
 
 function ProductDetails() {
   const { id } = useParams();
@@ -34,6 +35,18 @@ function ProductDetails() {
       });
   };
 
+  const addProductToBasket = () => {
+    const payload = {
+      id,
+      price,
+      image,
+      title,
+      description,
+      count,
+    };
+    dispatch(addToBasket(payload));
+  };
+
   return (
     <div className="product-detail-wrapper">
       <div className="detail-img-wrapper">
@@ -56,7 +69,9 @@ function ProductDetails() {
           <CiCirclePlus onClick={increment} className="product-detail-plus" />
         </div>
         <div>
-          <button className="add-to-cart-button">Add to cart</button>
+          <button onClick={addProductToBasket} className="add-to-cart-button">
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
