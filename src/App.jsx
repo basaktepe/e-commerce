@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     dispatch(findTotal());
-  }, [total]);
+  }, []);
 
   return (
     <>

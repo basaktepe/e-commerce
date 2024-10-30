@@ -52,8 +52,14 @@ export const basketSlice = createSlice({
         });
     },
   },
+  removeFromBasket: (state, action) => {
+    state.products = state.products.filter(
+      (product) => product.id != action.payload.id
+    );
+  },
 });
 
-export const { addToBasket, changeDrawer, findTotal } = basketSlice.actions;
+export const { addToBasket, changeDrawer, findTotal, removeFromBasket } =
+  basketSlice.actions;
 
 export default basketSlice.reducer;
