@@ -4,12 +4,14 @@ import { CiShoppingBasket } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { FaMoon } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Badge from "@mui/material/Badge";
+import { changeDrawer } from "../redux/slices/basketSlice";
 
 function Header() {
   const [theme, setTheme] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const { products } = useSelector((store) => store.basket);
 
@@ -55,7 +57,11 @@ function Header() {
             <CiLight className="icon" onClick={changeTheme} />
           )}
           <Badge badgeContent={products.length} color="secondary">
-            <CiShoppingBasket className="icon" style={{ marginRight: "5px" }} />
+            <CiShoppingBasket
+              onClick={() => dispatch(changeDrawer())}
+              className="icon"
+              style={{ marginRight: "5px" }}
+            />
           </Badge>
         </div>
       </div>

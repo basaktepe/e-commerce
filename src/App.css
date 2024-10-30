@@ -36,3 +36,20 @@ button {
 #root {
   height: 100vh;
 }
+.drawer-container {
+  gap: 0.5rem;
+  padding: 1.25rem;
+}
+
+.delete-item-button {
+  background: none;
+  margin: 0 0 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.trash-can {
+  width: 2rem;
+  height: 1rem;
+  color: red;
+}
