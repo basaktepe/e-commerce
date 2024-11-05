@@ -8,12 +8,21 @@ import Loading from "./components/Loading";
 import Drawer from "@mui/material/Drawer";
 import { useDispatch, useSelector } from "react-redux";
 import { FaRegTrashAlt } from "react-icons/fa";
-import { changeDrawer, findTotal } from "./redux/slices/basketSlice";
+import {
+  changeDrawer,
+  findTotal,
+  removeFromBasket,
+} from "./redux/slices/basketSlice";
 
 function App() {
   const { products, drawer, total } = useSelector((store) => store.basket);
 
   const dispatch = useDispatch();
+
+  const removeItem = (product) => {
+    dispatch(removeFromBasket(product));
+    dispatch(findTotal());
+  };
 
   useEffect(() => {
     dispatch(findTotal());
@@ -43,7 +52,10 @@ function App() {
                     <p style={{ fontWeight: "bold", width: "3.125rem" }}>
                       {product.price}TL
                     </p>
-                    <button className="delete-item-button">
+                    <button
+                      onClick={() => removeItem(product)}
+                      className="delete-item-button"
+                    >
                       <FaRegTrashAlt className="trash-can" />
                     </button>
                   </div>
