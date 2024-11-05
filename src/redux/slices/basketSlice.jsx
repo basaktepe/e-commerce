@@ -51,11 +51,12 @@ export const basketSlice = createSlice({
           state.total += product.price * product.count;
         });
     },
-  },
-  removeFromBasket: (state, action) => {
-    state.products = state.products.filter(
-      (product) => product.id != action.payload.id
-    );
+    removeFromBasket: (state, action) => {
+      state.products = state.products.filter(
+        (product) => product.id != action.payload.id
+      );
+      writeFromBasketToStorage(state.products);
+    },
   },
 });
 
